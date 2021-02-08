@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Лекция 1",
+    "file": "lec1.json",
+  },
+  {
+    "title": "Лекция 2",
+    "file": "lec1.json",
+    "hide": true
+  }
+]

@@ -1,5 +1,21 @@
-{
-"Лекция 4" : "lec4.json",
-"Лекция 5" : "data.json",
-"Лекция 6" : "lec6.json"
-}
+[
+  {
+    "title": "Лекция 1",
+    "path": "lec1.json"
+  },
+  {
+    "title": "Лекция 4",
+    "file": "lec4.json",
+    "hide": true
+  },
+  {
+    "title": "Лекция 5",
+    "file": "lec5.json",
+    "hide": true
+  },
+  {
+    "title": "Лекция 6",
+    "file": "lec6.json",
+    "hide": true
+  }
+]

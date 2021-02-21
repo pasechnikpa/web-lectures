@@ -4,6 +4,11 @@
     "path": "lec1.json"
   },
   {
+    "title": "Лекция 2",
+    "html": true,
+    "path": "/html/lecture2.html"
+  },
+  {
     "title": "Лекция 4",
     "file": "lec4.json",
     "hide": true

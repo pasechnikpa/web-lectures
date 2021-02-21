@@ -1,0 +1,1825 @@
+<!DOCTYPE html><html lang="ru-RU"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}@page{size:960px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;color-adjust:exact!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp default theme.
+ *
+ * @theme default
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */@font-face{font-family:octicons-link;src:url(data:font/woff;charset=utf-8;base64,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) format("woff")}div#p>svg>foreignObject>section .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}div#p>svg>foreignObject>section .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}div#p>svg>foreignObject>section .anchor:focus{outline:none}div#p>svg>foreignObject>section h1 .octicon-link,div#p>svg>foreignObject>section h2 .octicon-link,div#p>svg>foreignObject>section h3 .octicon-link,div#p>svg>foreignObject>section h4 .octicon-link,div#p>svg>foreignObject>section h5 .octicon-link,div#p>svg>foreignObject>section h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}div#p>svg>foreignObject>section h1:hover .anchor,div#p>svg>foreignObject>section h2:hover .anchor,div#p>svg>foreignObject>section h3:hover .anchor,div#p>svg>foreignObject>section h4:hover .anchor,div#p>svg>foreignObject>section h5:hover .anchor,div#p>svg>foreignObject>section h6:hover .anchor{text-decoration:none}div#p>svg>foreignObject>section h1:hover .anchor .octicon-link,div#p>svg>foreignObject>section h2:hover .anchor .octicon-link,div#p>svg>foreignObject>section h3:hover .anchor .octicon-link,div#p>svg>foreignObject>section h4:hover .anchor .octicon-link,div#p>svg>foreignObject>section h5:hover .anchor .octicon-link,div#p>svg>foreignObject>section h6:hover .anchor .octicon-link{visibility:visible}div#p>svg>foreignObject>section{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}div#p>svg>foreignObject>section .pl-c{color:#6a737d}div#p>svg>foreignObject>section .pl-c1,div#p>svg>foreignObject>section .pl-s .pl-v{color:#005cc5}div#p>svg>foreignObject>section .pl-e,div#p>svg>foreignObject>section .pl-en{color:#6f42c1}div#p>svg>foreignObject>section .pl-s .pl-s1,div#p>svg>foreignObject>section .pl-smi{color:#24292e}div#p>svg>foreignObject>section .pl-ent{color:#22863a}div#p>svg>foreignObject>section .pl-k{color:#d73a49}div#p>svg>foreignObject>section .pl-pds,div#p>svg>foreignObject>section .pl-s,div#p>svg>foreignObject>section .pl-s .pl-pse .pl-s1,div#p>svg>foreignObject>section .pl-sr,div#p>svg>foreignObject>section .pl-sr .pl-cce,div#p>svg>foreignObject>section .pl-sr .pl-sra,div#p>svg>foreignObject>section .pl-sr .pl-sre{color:#032f62}div#p>svg>foreignObject>section .pl-smw,div#p>svg>foreignObject>section .pl-v{color:#e36209}div#p>svg>foreignObject>section .pl-bu{color:#b31d28}div#p>svg>foreignObject>section .pl-ii{background-color:#b31d28;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2{background-color:#d73a49;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2:before{content:"^M"}div#p>svg>foreignObject>section .pl-sr .pl-cce{color:#22863a;font-weight:700}div#p>svg>foreignObject>section .pl-ml{color:#735c0f}div#p>svg>foreignObject>section .pl-mh,div#p>svg>foreignObject>section .pl-mh .pl-en,div#p>svg>foreignObject>section .pl-ms{color:#005cc5;font-weight:700}div#p>svg>foreignObject>section .pl-mi{color:#24292e;font-style:italic}div#p>svg>foreignObject>section .pl-mb{color:#24292e;font-weight:700}div#p>svg>foreignObject>section .pl-md{background-color:#ffeef0;color:#b31d28}div#p>svg>foreignObject>section .pl-mi1{background-color:#f0fff4;color:#22863a}div#p>svg>foreignObject>section .pl-mc{background-color:#ffebda;color:#e36209}div#p>svg>foreignObject>section .pl-mi2{background-color:#005cc5;color:#f6f8fa}div#p>svg>foreignObject>section .pl-mdr{color:#6f42c1;font-weight:700}div#p>svg>foreignObject>section .pl-ba{color:#586069}div#p>svg>foreignObject>section .pl-sg{color:#959da5}div#p>svg>foreignObject>section .pl-corl{color:#032f62;text-decoration:underline}div#p>svg>foreignObject>section details{display:block}div#p>svg>foreignObject>section summary{display:list-item}div#p>svg>foreignObject>section a{background-color:transparent}div#p>svg>foreignObject>section a:active,div#p>svg>foreignObject>section a:hover{outline-width:0}div#p>svg>foreignObject>section strong{font-weight:inherit;font-weight:bolder}div#p>svg>foreignObject>section h1{margin:.67em 0}div#p>svg>foreignObject>section img{border-style:none}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section kbd,div#p>svg>foreignObject>section pre{font-family:monospace,monospace;font-size:1em}div#p>svg>foreignObject>section hr{box-sizing:content-box;overflow:visible}div#p>svg>foreignObject>section input{font:inherit;margin:0;overflow:visible}div#p>svg>foreignObject>section [type=checkbox]{padding:0}div#p>svg>foreignObject>section *,div#p>svg>foreignObject>section [type=checkbox]{box-sizing:border-box}div#p>svg>foreignObject>section input{font-family:inherit;font-size:inherit;line-height:inherit}div#p>svg>foreignObject>section a{color:#0366d6;text-decoration:none}div#p>svg>foreignObject>section a:hover{text-decoration:underline}div#p>svg>foreignObject>section strong{font-weight:600}div#p>svg>foreignObject>section hr{background:transparent;border-bottom:1px solid #dfe2e5;height:0;margin:15px 0;overflow:hidden}div#p>svg>foreignObject>section hr:after,div#p>svg>foreignObject>section hr:before{content:"";display:table}div#p>svg>foreignObject>section hr:after{clear:both}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0}div#p>svg>foreignObject>section td,div#p>svg>foreignObject>section th{padding:0}div#p>svg>foreignObject>section details summary{cursor:pointer}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section h1{font-size:32px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{font-weight:600}div#p>svg>foreignObject>section h2{font-size:24px}div#p>svg>foreignObject>section h3{font-size:20px}div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4{font-weight:600}div#p>svg>foreignObject>section h4{font-size:16px}div#p>svg>foreignObject>section h5{font-size:14px}div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600}div#p>svg>foreignObject>section h6{font-size:12px}div#p>svg>foreignObject>section p{margin-bottom:10px;margin-top:0}div#p>svg>foreignObject>section blockquote{margin:0}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{margin-bottom:0;margin-top:0;padding-left:0}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ul ol{list-style-type:lower-roman}div#p>svg>foreignObject>section ol ol ol,div#p>svg>foreignObject>section ol ul ol,div#p>svg>foreignObject>section ul ol ol,div#p>svg>foreignObject>section ul ul ol{list-style-type:lower-alpha}div#p>svg>foreignObject>section dd{margin-left:0}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px}div#p>svg>foreignObject>section pre{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section input::-webkit-inner-spin-button,div#p>svg>foreignObject>section input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}div#p>svg>foreignObject>section .border{border:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .border-0{border:0!important}div#p>svg>foreignObject>section .border-bottom{border-bottom:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .rounded-1{border-radius:3px!important}div#p>svg>foreignObject>section .bg-white{background-color:#fff!important}div#p>svg>foreignObject>section .bg-gray-light{background-color:#fafbfc!important}div#p>svg>foreignObject>section .text-gray-light{color:#6a737d!important}div#p>svg>foreignObject>section .mb-0{margin-bottom:0!important}div#p>svg>foreignObject>section .my-2{margin-bottom:8px!important;margin-top:8px!important}div#p>svg>foreignObject>section .py-0{padding-bottom:0!important;padding-top:0!important}div#p>svg>foreignObject>section .py-2{padding-bottom:8px!important;padding-top:8px!important}div#p>svg>foreignObject>section .pl-3,div#p>svg>foreignObject>section .px-3{padding-left:16px!important}div#p>svg>foreignObject>section .px-3{padding-right:16px!important}div#p>svg>foreignObject>section .f6{font-size:12px!important}div#p>svg>foreignObject>section .lh-condensed{line-height:1.25!important}div#p>svg>foreignObject>section .text-bold{font-weight:600!important}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section:before{
+  /* content:""; */display:table}div#p>svg>foreignObject>section:after{clear:both}div#p>svg>foreignObject>section>:first-child{margin-top:0!important}div#p>svg>foreignObject>section>:last-child{margin-bottom:0!important}div#p>svg>foreignObject>section a:not([href]){color:inherit;text-decoration:none}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section dl,div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section p,div#p>svg>foreignObject>section pre,div#p>svg>foreignObject>section table,div#p>svg>foreignObject>section ul{margin-bottom:16px;margin-top:0}div#p>svg>foreignObject>section hr{background-color:#e1e4e8;border:0;height:.25em;margin:24px 0;padding:0}div#p>svg>foreignObject>section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section blockquote>:last-child{margin-bottom:0}div#p>svg>foreignObject>section kbd{border:1px solid #c6cbd1;border-bottom-color:#959da5;box-shadow:inset 0 -1px 0 #959da5;font-size:11px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}div#p>svg>foreignObject>section h1{font-size:2em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:1px solid #eaecef;padding-bottom:.3em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.25em}div#p>svg>foreignObject>section h4{font-size:1em}div#p>svg>foreignObject>section h5{font-size:.875em}div#p>svg>foreignObject>section h6{color:#6a737d;font-size:.85em}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{padding-left:2em}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ol ul,div#p>svg>foreignObject>section ul ol,div#p>svg>foreignObject>section ul ul{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section li{word-wrap:break-all}div#p>svg>foreignObject>section li>p{margin-top:16px}div#p>svg>foreignObject>section li+li{margin-top:.25em}div#p>svg>foreignObject>section dl{padding:0}div#p>svg>foreignObject>section dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}div#p>svg>foreignObject>section dl dd{margin-bottom:16px;padding:0 16px}div#p>svg>foreignObject>section table{display:block;overflow:auto;width:100%}div#p>svg>foreignObject>section table th{font-weight:600}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border:1px solid #dfe2e5;padding:6px 13px}div#p>svg>foreignObject>section table tr{background-color:#fff;border-top:1px solid #c6cbd1}div#p>svg>foreignObject>section table tr:nth-child(2n){background-color:#f6f8fa}div#p>svg>foreignObject>section img{background-color:#fff;box-sizing:content-box;max-width:100%}div#p>svg>foreignObject>section img[align=right]{padding-left:20px}div#p>svg>foreignObject>section img[align=left]{padding-right:20px}div#p>svg>foreignObject>section code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}div#p>svg>foreignObject>section pre{word-wrap:normal}div#p>svg>foreignObject>section pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}div#p>svg>foreignObject>section .highlight{margin-bottom:16px}div#p>svg>foreignObject>section .highlight pre{margin-bottom:0;word-break:normal}div#p>svg>foreignObject>section pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}div#p>svg>foreignObject>section pre code{background-color:transparent;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0;word-wrap:normal}div#p>svg>foreignObject>section .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:90%}div#p>svg>foreignObject>section .blob-wrapper{border-bottom-left-radius:3px;border-bottom-right-radius:3px;overflow-x:auto;overflow-y:hidden}div#p>svg>foreignObject>section .blob-wrapper-embedded{max-height:240px;overflow-y:auto}div#p>svg>foreignObject>section .blob-num{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;user-select:none;vertical-align:top;white-space:nowrap;width:1%}div#p>svg>foreignObject>section .blob-num:hover{color:rgba(27,31,35,.6)}div#p>svg>foreignObject>section .blob-num:before{content:attr(data-line-number)}div#p>svg>foreignObject>section .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}div#p>svg>foreignObject>section .blob-code-inner{color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;overflow:visible;white-space:pre;word-wrap:normal}div#p>svg>foreignObject>section .pl-token.active,div#p>svg>foreignObject>section .pl-token:hover{background:#ffea7f;cursor:pointer}div#p>svg>foreignObject>section kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-bottom-color:#c6cbd1;border-radius:3px;box-shadow:inset 0 -1px 0 #c6cbd1;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}div#p>svg>foreignObject>section :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}div#p>svg>foreignObject>section .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}div#p>svg>foreignObject>section .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}div#p>svg>foreignObject>section .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}div#p>svg>foreignObject>section .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}div#p>svg>foreignObject>section .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}div#p>svg>foreignObject>section .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}div#p>svg>foreignObject>section .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}div#p>svg>foreignObject>section .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}div#p>svg>foreignObject>section .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}div#p>svg>foreignObject>section .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}div#p>svg>foreignObject>section .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}div#p>svg>foreignObject>section .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}div#p>svg>foreignObject>section .task-list-item{list-style-type:none}div#p>svg>foreignObject>section .task-list-item+.task-list-item{margin-top:3px}div#p>svg>foreignObject>section .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}div#p>svg>foreignObject>section hr{border-bottom-color:#eee}div#p>svg>foreignObject>section .pl-0{padding-left:0!important}div#p>svg>foreignObject>section .pl-1{padding-left:4px!important}div#p>svg>foreignObject>section .pl-2{padding-left:8px!important}div#p>svg>foreignObject>section .pl-3{padding-left:16px!important}div#p>svg>foreignObject>section .pl-4{padding-left:24px!important}div#p>svg>foreignObject>section .pl-5{padding-left:32px!important}div#p>svg>foreignObject>section .pl-6{padding-left:40px!important}div#p>svg>foreignObject>section .pl-7{padding-left:48px!important}div#p>svg>foreignObject>section .pl-8{padding-left:64px!important}div#p>svg>foreignObject>section .pl-9{padding-left:80px!important}div#p>svg>foreignObject>section .pl-10{padding-left:96px!important}div#p>svg>foreignObject>section .pl-11{padding-left:112px!important}div#p>svg>foreignObject>section .pl-12{padding-left:128px!important}div#p>svg>foreignObject>section .hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-meta{color:#969896}div#p>svg>foreignObject>section .hljs-emphasis,div#p>svg>foreignObject>section .hljs-quote,div#p>svg>foreignObject>section .hljs-strong,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#df5000}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#d73a49}div#p>svg>foreignObject>section .hljs-attribute,div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-literal,div#p>svg>foreignObject>section .hljs-symbol{color:#0086b3}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section{color:#63a35c}div#p>svg>foreignObject>section .hljs-tag{color:#333}div#p>svg>foreignObject>section .hljs-attr,div#p>svg>foreignObject>section .hljs-selector-attr,div#p>svg>foreignObject>section .hljs-selector-class,div#p>svg>foreignObject>section .hljs-selector-id,div#p>svg>foreignObject>section .hljs-selector-pseudo,div#p>svg>foreignObject>section .hljs-title{color:#6f42c1}div#p>svg>foreignObject>section .hljs-addition{color:#55a532;background-color:#eaffea}div#p>svg>foreignObject>section .hljs-deletion{color:#bd2c00;background-color:#ffecec}div#p>svg>foreignObject>section .hljs-link{text-decoration:underline}div#p>svg>foreignObject>section .hljs-number{color:#005cc5}div#p>svg>foreignObject>section .hljs-string{color:#032f62}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:563px}div#p>svg>foreignObject>section h1{color:#246;font-size:1.6em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:none}div#p>svg>foreignObject>section h2{font-size:1.3em}div#p>svg>foreignObject>section h3{font-size:1.1em}div#p>svg>foreignObject>section h4{font-size:1.05em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit;color:#48c}div#p>svg>foreignObject>section hr{height:0;padding-top:.25em}div#p>svg>foreignObject>section pre{border:1px solid #999;line-height:1.15;overflow:visible}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:529px}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{margin:0;position:absolute;left:30px;color:hsla(0,0%,40%,.75);font-size:18px}div#p>svg>foreignObject>section header{top:21px}div#p>svg>foreignObject>section footer{bottom:21px}div#p>svg>foreignObject>section{align-items:stretch;background:#fff;display:flex;flex-direction:column;flex-wrap:nowrap;font-size:29px;height:720px;justify-content:center;padding:78.5px;width:1280px}div#p>svg>foreignObject>section>:last-child,div#p>svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section:after{position:absolute;padding:0;right:30px;bottom:21px;font-size:24px;color:#777}div#p>svg>foreignObject>section.invert{background-color:#222;color:#e6eaf0}div#p>svg>foreignObject>section.invert:after{color:#999}div#p>svg>foreignObject>section.invert img{background-color:transparent}div#p>svg>foreignObject>section.invert a{color:#50b3ff}div#p>svg>foreignObject>section.invert h1{color:#a3c5e7}div#p>svg>foreignObject>section.invert h2,div#p>svg>foreignObject>section.invert h3,div#p>svg>foreignObject>section.invert h4,div#p>svg>foreignObject>section.invert h5{color:#ebeff5}div#p>svg>foreignObject>section.invert blockquote,div#p>svg>foreignObject>section.invert h6{border-color:#3d3f43;color:#939699}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#7bf}div#p>svg>foreignObject>section.invert hr{background-color:#3d3f43}div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header{color:hsla(0,0%,60%,.75)}div#p>svg>foreignObject>section.invert code,div#p>svg>foreignObject>section.invert kbd{background-color:#111}div#p>svg>foreignObject>section.invert kbd{border-color:#666;box-shadow:inset 0 -1px 0 #555;color:#e6eaf0}div#p>svg>foreignObject>section.invert table tr{background-color:#12181d;border-color:#60657b}div#p>svg>foreignObject>section.invert table tr:nth-child(2n){background-color:#1b2024}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#5b5e61}div#p>svg>foreignObject>section.invert pre{background-color:#0a0e12;border-color:#777}div#p>svg>foreignObject>section.invert pre code{background-color:transparent}div#p>svg>foreignObject>section[data-color] h1,div#p>svg>foreignObject>section[data-color] h2,div#p>svg>foreignObject>section[data-color] h3,div#p>svg>foreignObject>section[data-color] h4,div#p>svg>foreignObject>section[data-color] h5,div#p>svg>foreignObject>section[data-color] h6{color:currentColor}div#p>svg>foreignObject>section{width:960px;height:720px}div#p>svg>foreignObject>section body,div#p>svg>foreignObject>section p{font:Arial;font-weight:normal}div#p>svg>foreignObject>section *{margin-bottom:0}div#p>svg>foreignObject>section h1{font-size:200%;margin-bottom:0!important;line-height:1}div#p>svg>foreignObject>section h2{font-size:150%}div#p>svg>foreignObject>section h3{font-size:150%}div#p>svg>foreignObject>section li,div#p>svg>foreignObject>section p{font-size:140%;margin:0}div#p>svg>foreignObject>section li li{font-size:100%}div#p>svg>foreignObject>section:after{font-weight:bold;font-size:45px}div#p>svg>foreignObject>section .code,div#p>svg>foreignObject>section pre{border:1px solid black;border-radius:2px;margin-bottom:2px;font-size:26px;font-family:"Arial"}div#p>svg>foreignObject>section .code{padding:10px 29px;font-weight:normal}div#p>svg>foreignObject>section .code p{font-size:26px}div#p>svg>foreignObject>section h5 strong{color:black!important;font-weight:900}div#p>svg>foreignObject>section .mt{margin-top:10px}div#p>svg>foreignObject>section .test{color:blue}div#p>svg>foreignObject>section .border-2{color:blue}div#p>svg>foreignObject>section .border-radius{color:blue;border:40px solid red;padding:10px;margin:5px auto;width:600px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="1" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="1" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Тема 2. CSS (каскадные таблицы стилей)</h1>
+<p>— формальный язык описания внешнего вида документа, написанного с использованием языка разметки</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="2" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="2" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Преимущества</h1>
+<ul>
+<li>централизованное управление отображением множества документов;</li>
+<li>упрощенный контроль внешнего вида веб-страниц;</li>
+<li>наличие разработанных дизайнерских техник;</li>
+<li>возможность использования различных стилей для одного документа, в зависимости от устройства.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="3" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="3" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Общий вид CSS-правила</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>селектор {
+  свойство: значение;
+  свойство: значение;
+  свойство: значение;
+}
+селектор, селектор, селектор {
+  свойство: значение;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="4" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="4" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Селектор (selector)</h1>
+<p>это часть CSS-правила, которая сообщает браузеру, к какому элементу (или элементам) веб-страницы будет применён стиль</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="5" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="5" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Простейшие селекторы</h1>
+<p>Селектор &quot;тег&quot;</p>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-tag">div</span>{}
+</span></span></foreignObject></svg></code></pre>
+<p>Селектор &quot;класс&quot;</p>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{}
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="6" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="6" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Основные единицы измерения</h1>
+<table>
+<thead>
+<tr>
+<th>Единица измерения</th>
+<th>Обозначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пиксели</td>
+<td>px</td>
+</tr>
+<tr>
+<td>Размер литеры 'm' текущего шрифта</td>
+<td>em</td>
+</tr>
+<tr>
+<td>Корневой em</td>
+<td>rem</td>
+</tr>
+<tr>
+<td>Процент от размера родительского элемента</td>
+<td>%</td>
+</tr>
+<tr>
+<td>0.01 ширины или высоты окна</td>
+<td>vw, vh</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="7" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="7" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Единицы измерения</h1>
+<table>
+<thead>
+<tr>
+<th>Единица измерения</th>
+<th>Обозначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Применяются для печати</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Пункты, пики, сантиметры, миллиметры, дюймы</td>
+<td>pt, pc,cm, mm, in</td>
+</tr>
+<tr>
+<td><strong>Применяются редко</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Размер литеры 'x' текущего шрифта, корневой</td>
+<td>ex, rex</td>
+</tr>
+<tr>
+<td><strong>Проблемы поддержки</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>0.01 от меньшей (большей) стороны  окна</td>
+<td>vmin, vmax</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="8" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="8" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Цвет</h1>
+<ul>
+<li>#00FF00</li>
+<li>#00FF007F</li>
+<li>rgb(0,255,0)</li>
+<li>green</li>
+<li>hsl(120,100%,100%)</li>
+<li>rgba(0,255,0,.5)</li>
+<li>hsla(120,100%,100%,0.1)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="9" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="9" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Цвет</h1>
+<strong>
+<div style="color:green">
+<ul>
+<li>green</li>
+<li>#00FF00</li>
+<li>rgb(0,255,0)</li>
+<li>hsl(120,100%,100%)</li>
+</ul>
+</div>
+<div style="color:green;opacity:.7">
+<ul>
+<li>#00FF007F</li>
+<li>rgba(0,255,0,.5)</li>
+<li>hsla(120,100%,100%,0.5)</li>
+</ul>
+</div>
+</strong>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="10" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="10" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1><strong>Блок</strong> - блочный элемент разметки</h1>
+<p><strong>Блочный элемент</strong> - элемент разметки, который обладает следующими свойствами:</p>
+<ul>
+<li>занимает всю ширину страницы</li>
+<li>не обтекается другими элементами</li>
+<li>имеет регулируемые размеры и отступы</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="11" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="11" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>2.1 Блочная модель</h1>
+<h2></h2>
+<img style="width: 90vw; height: 60vw;" src="data:image/png;base64,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" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="12" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="12" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Простой способ подключения CSS</h1>
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#cccccc</span>;
+    }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"test"</span>&gt;</span>
+        ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div class="test">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="13" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="13" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Цвет фона background, <br /> цвет текста color</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+    }
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div class="test">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="14" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="14" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Границы блока</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border-style</span>: solid;
+    }
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div style="
+    color: blue;
+    /* border-width: 4px; */
+    border-style: solid;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="15" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="15" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<div class="mt" style="border-style: dotted;">border-style: dotted;</div>
+<div class="mt" style="border-style: dashed;">border-style: dashed;</div>
+<div class="mt" style="border-style: double;">border-style: double;</div>
+<div class="mt" style="border-style: groove;">border-style: groove;</div>
+<div class="mt" style="border-style: ridge;">border-style: ridge;</div>
+<div class="mt" style="border-style: inset ;">border-style: inset ;</div>
+<div class="mt" style="border-style: outset;">border-style: outset;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="16" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="16" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Границы блока 1 значение</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border-style</span>: solid;
+        <span class="hljs-attribute">border-color</span>: red;
+        <span class="hljs-attribute">border-width</span>: <span class="hljs-number">30px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div style="
+    color: blue;
+    /* border-width: 4px; */
+    border-style: solid;
+    border-color: red;
+    border-width: 30px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="17" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="17" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Границы блока 1 значение с указанием сторон</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border-style</span>: solid;
+        <span class="hljs-attribute">border-color</span>: red;
+        <span class="hljs-attribute">border-left-width</span>: <span class="hljs-number">30px</span>;
+        <span class="hljs-attribute">border-right-width</span>: <span class="hljs-number">10px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div style="
+    color: blue;
+    /* border-width: 4px; */
+    border-style: solid;
+    border-color: red;
+    border-left-width: 30px;
+    border-right-width: 10px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="18" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="18" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Несколько значений свойства для разных сторон</h1>
+<div class="mt" style="
+    color: blue;
+    border-style: solid;
+    border-color: red;
+    border-width: 30px;
+">
+border-color: red;
+</div>
+<div class="mt" style="
+    color: blue;
+    border-style: solid;
+    border-color: red green;
+    border-width: 30px;
+">border-color: red green;</div>
+<div class="mt" style="
+    color: blue;
+    border-style: solid;
+    border-color: red green blue;
+    border-width: 30px;
+">border-color: red green blue;</div>
+<div class="mt" style="
+    color: blue;
+    border-style: solid;
+    border-color: red green blue cyan;
+    border-width: 30px;
+">border-color: red green blue cyan;</div>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Справедливо для других блочных свойств
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="19" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="19" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Сокращенная запись границ</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+    }
+</span></span></foreignObject></svg></code></pre>
+<hr />
+<div style="
+    color: blue;
+    border: 30px solid red;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+<p>Не допускает нескольких значений для разных свойств, но можно заменить на border-left, border-right ...</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="20" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="20" data-marpit-pagination-total="54" style="--paginate:true;
+;"><div class="mt border-2" style="border-top: 30px solid red;">border-top: 30px solid red;</div>
+<div class="mt border-2" style="border-right: 30px solid red;">border-right: 30px solid red;</div>
+<div class="mt border-2" style="border-left: 30px solid red;">border-left: 30px solid red;</div>
+<div class="mt border-2" style="border-bottom: 30px solid red;">border-bottom: 30px solid red;</div>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Справедливо для других блочных свойств
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="21" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="21" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Внутренний отступ</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+    padding: 40px 30px 10px;
+">
+<span style="background: green;">ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test</span>
+</div>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Зелёным цветом выделена область занимаемая текстом!!!
+Допустимы padding-left, padding-right ...
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="22" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="22" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Внешний отступ</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> <span class="hljs-number">30px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+        padding: 40px 30px 10px;
+    margin: 5px 30px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Также допустимы margin-left, margin-right ...
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="23" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="23" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Размеры</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> <span class="hljs-number">30px</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>; 
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+        padding: 40px 30px 10px;
+    margin: 5px 30px;
+    width: 600px; height: 250px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="24" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="24" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>margin: X auto</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> auto;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>; 
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+        padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 250px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="25" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="25" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Визуальный рамер элемента</h1>
+<div class="mt" style="width:700px;background:#88ff88;box-sizing:content;">width: 700px;</div>
+<div class="mt" style="width:700px;background:#88ff88;border:15px solid red;box-sizing:content-box;">width: 700px; border: 15px solid red;</div>
+<div class="mt" style="width:700px;background:#88ff88;border:15px solid red;box-sizing:content-box;padding:15px;">width: 700px; border: 15px solid red; padding: 15px;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="26" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="26" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>border-radius</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> auto;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>; 
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">30px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+        padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 250px;
+    border-radius: 31px;
+">
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="27" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="27" data-marpit-pagination-total="54" style="--paginate:true;
+;"><div class="border-radius" style="border-radius: 31px;">border-radius: 30px;</div>
+<div class="border-radius" style="border-radius: 60px;">border-radius: 60px;</div>
+<div class="border-radius" style="border-radius: 30px 60px;">border-radius: 30px 60px;</div>
+<div class="border-radius" style="border-top-left-radius: 30px 60px;">border-top-left-radius: 30px 60px;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="28" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="28" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>overflow</h1>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-selector-class">.test</span>{
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> <span class="hljs-number">2px</span> solid red;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> auto;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>; 
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">170px</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">30px</span>;
+    }
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    color: blue;
+    border: 30px solid red;
+    padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 170px;
+    border-radius: 31px;
+">
+без указания<br />
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="29" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="29" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<div style="
+    color: blue;
+    border: 30px solid red;
+    padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 170px;
+    border-radius: 31px;
+    overflow: hidden;
+">
+overflow: hidden;<br />
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+<div style="
+    color: blue;
+    border: 30px solid red;
+    padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 170px;
+    border-radius: 31px;
+    overflow: scroll;
+">
+overflow: scroll;<br />
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+<div style="
+    color: blue;
+    border: 30px solid red;
+    padding: 40px 30px 10px;
+    margin: 5px auto;
+    width: 600px; height: 170px;
+    border-radius: 31px;
+    overflow: auto;
+">
+overflow: auto;<br />
+ZZZZZZ ZZZZZZZZ zzzzzzz zzzzzzz zzzz .test
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="30" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="30" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<ul>
+<li>visible - значение, используемое браузером по умолчанию</li>
+<li>scroll - добавляет к элементу полосы прокрутки по вертикали и горизонтали</li>
+<li>auto - добавляет полосы прокрутки при необходимости</li>
+<li>hidden - скрывает часть содержимого, которое выходит за границы блочного элемента</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="31" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="31" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>overflow-x: scroll 
+</span></span></foreignObject></svg></code></pre>
+<p>Добавляет пролосу прокрутки только для <strong>горизонтальной</strong> оси</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>overflow-y: scroll 
+</span></span></foreignObject></svg></code></pre>
+<p>Добавляет пролосу прокрутки только для <strong>вертикальной</strong> оси</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="32" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="32" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>2.2 Фоны</h1>
+<ul>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-repeat</li>
+<li>background-position</li>
+</ul>
+<p>Применяется не только для блочных элементов</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="33" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="33" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-color</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="background-color: #aaffaa;
+    height: 200px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="34" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="34" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-image</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    height: 200px;
+    border: 1px solid green;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="35" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="35" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-repeat: repeat-x;</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: repeat-x;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: repeat-x;
+    height: 200px;
+    border: 1px solid green;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="36" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="36" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-repeat: repeat-y;</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: repeat-y;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: repeat-y;
+    height: 200px;
+    border: 1px solid green;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="37" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="37" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-repeat: no-repeat;</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 1px solid green;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="38" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="38" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-position</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">40px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 1px solid green;
+    background-position: 50% 40px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="39" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="39" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-position</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-position</span>: bottom right;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 1px solid green;
+    background-position: bottom right;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="40" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="40" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-size</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-position</span>: bottom right;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 1px solid green;
+    background-position: bottom right;
+    background-size: 300px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="41" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="41" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-size</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>);
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-position</span>: bottom right;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">300px</span> <span class="hljs-number">150px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    background-image: url('images/2-logo.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 1px solid green;
+    background-position: bottom right;
+    background-size: 300px 150px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="42" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="42" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background (сокращенная запись)</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#aaffaa</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>) 
+            no-repeat bottom right;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">200px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background: #aaffaa url('images/2-logo.png') 
+            no-repeat bottom right;
+    height: 200px;
+    border: 1px solid green;
+    background-size: 200px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="43" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="43" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background (сокращенная запись)</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>) 
+            no-repeat bottom right,
+        <span class="hljs-built_in">url</span>(<span class="hljs-string">'images/2-logo.png'</span>) 
+            no-repeat bottom left;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; 
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">200px</span>, <span class="hljs-number">100px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background: url('images/2-logo.png') 
+            no-repeat bottom right,
+        url('images/2-logo.png') 
+            no-repeat bottom left;
+    height: 200px;
+    border: 1px solid green;
+    background-size: 200px, 100px;
+">
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="44" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="44" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>background-attachment</h1>
+<ul>
+<li>fixed - делает фоновое изображение элемента неподвижным.</li>
+<li>scroll - Позволяет перемещаться фону вместе с содержимым.</li>
+<li>local - Фон фиксируется с учётом поведения элемента. Если элемент имеет прокрутку, то фон будет прокручиваться вместе с содержимым, но фон выходящий за рамки элемента остаётся на месте.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="45" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="45" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>2.3 Базовая работа с текстом</h1>
+<h2>&quot;Красная строка&quot;</h2>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">text-indent</span>: <span class="hljs-number">50px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    text-indent: 50px;
+">Стандартный вид текста не всегда подходит, как по внешнему виду, так и по цвету, CSS предоставляет обширные возможности, с помощью которых, вы можете кардинально изменить ваш текст, например задав ему цвет, меняя межстрочный интервал, расстояние между буквами или размер текста и многое другое.</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="46" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="46" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Выключка</h1>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    margin: 15px;
+    text-align: right;
+">
+<strong>text-align: right; </strong>
+Стандартный вид текста не всегда подходит, как по внешнему виду, ...</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+"><strong>text-align: center;</strong> Стандартный вид текста не всегда подходит, как по внешнему виду,...</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    margin: 15px;
+    text-align: left;
+"><strong>text-align: left;</strong> Стандартный вид текста не всегда подходит, как по внешнему виду, ...</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    margin: 15px;
+    text-align: justify;
+"><strong>text-align: justify;</strong> Стандартный вид текста не всегда подходит, как по внешнему виду, ...</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="47" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="47" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Размер и цвет</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">color</span>:red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+">Стандартный вид текста...</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="48" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="48" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Тень</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">color</span>:red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">5px</span> <span class="hljs-number">7px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#000</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+    text-shadow: 5px 7px 3px #000;
+">Стандартный вид текста...</div>
+<ul>
+<li>5px - смещение вправо</li>
+<li>7px - смещение вниз</li>
+<li>3px - смещение размытие</li>
+<li>#000 - цвет</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="49" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="49" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Шрифт</h1>
+<pre><code class="language-CSS"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-selector-class">.test</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#aaffaa</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">color</span>:red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Times New Roman'</span>, Times, serif;
+}
+</span></span></foreignObject></svg></code></pre>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+">Стандартный вид текста...</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="50" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="50" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Наборы шрифтов</h1>
+<ul>
+<li>sans-serif - шрифты без засечек, считается что они лучше читаются на экране компьютера, чем шрифты семейства serif</li>
+<li>serif - семейство шрифтов с засечками</li>
+<li>monospace - моноширинные шрифты</li>
+<li>cursive - рукописные шрифты</li>
+<li>fantasy - художественные и декоративные шрифты</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="51" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="51" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h3>Стиль шрифта</h3>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:italic;
+">font-style:italic;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:oblique ;
+">font-style:oblique;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:none;
+">font-style:none;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="52" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="52" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h3>Начертание шрифта</h3>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    font-weight: normal;
+">font-weight: normal; (по умолчанию)</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    font-weight: bold;
+">font-weight: bold;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    font-weight: 900;
+">font-weight: 900;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    font-weight: 100;
+">font-weight: 100;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="53" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="53" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Дополнительное оформление текста</h1>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-decoration: none;
+">text-decoration: none;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-decoration: underline;
+">text-decoration: underline;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-decoration: line-through;
+">text-decoration: line-through;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-decoration: overline;
+">text-decoration: overline;</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="54" data-paginate="true" data-style="body, p{font: Arial; font-weight: normal}
+*{margin-bottom: 0;}
+h1 {font-size:200%; margin-bottom: 0!important;line-height: 1}
+h2 {font-size:150%;}
+h3 {font-size:150%}
+p, li {font-size:140%; margin: 0}
+li li {font-size:100%}
+section::after {
+    font-weight: bold; font-size: 45px;
+}
+pre, .code{border: 1px solid black; border-radius: 2px; margin-bottom: 2px; font-size: 26px; font-family: &quot;Arial&quot;}
+.code{padding: 10px 29px; font-weight: normal}
+.code p{font-size: 26px;}
+h5 strong{color: black!important; font-weight: 900;}
+.mt{margin-top:10px;}
+" data-marpit-pagination="54" data-marpit-pagination-total="54" style="--paginate:true;
+;">
+<h1>Регистр букв</h1>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-transform: uppercase;
+">text-transform: uppercase;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-transform: lowercase;
+">text-transform: lowercase;</div>
+<div style="
+    background-color: #aaffaa;
+    padding: 15px;
+    color:red;
+    font-size:  40px;
+    text-transform: capitalize;
+">text-transform: capitalize;</div></section>
+</foreignObject></svg></div><script>!function(){"use strict";const t=()=>"Apple Computer, Inc."===navigator.vendor?[e]:[];function e(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const i=t||e.currentScale||1,n=e.viewBox.baseVal.width/i,s=e.viewBox.baseVal.height/i,o=Math.min(r/s,a/n);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,i=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-o*n)/2-e,c=(r-o*s)/2-i;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${o}) translate(${e}px,${i}px)`})})}})}const r="data-marp-fitting",a="data-marp-fitting-code",i="data-marp-fitting-math",n=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};!function(e=!0){const s=()=>{for(const e of t())e();Array.from(document.querySelectorAll(`svg[${r}="svg"]`),t=>{const e=t.firstChild,r=e.firstChild,{scrollWidth:s,scrollHeight:o}=r;let l,c=1;if(t.hasAttribute(a)&&(l=t.parentElement.parentElement),t.hasAttribute(i)&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(c=e)}const m=Math.max(s,c),p=Math.max(o,1),g=`0 0 ${m} ${p}`;n(e,"width",`${m}`),n(e,"height",`${p}`),n(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),n(t,"viewBox",g)&&t.classList.toggle("__reflow__")}),e&&window.requestAnimationFrame(s)};s()}()}();
+</script><script>!function(){"use strict";var e={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},u=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},d={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:u.bind(null,1),prev:u.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(d)})),n||c(0),d}},t=function(){return function(e){e.slides.forEach((function(e){e.addEventListener("keydown",(function(e){(/INPUT|TEXTAREA|SELECT/.test(e.target.nodeName)||"true"===e.target.contentEditable)&&e.stopPropagation()}))}))}};function n(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function r(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}function s(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var o,i=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,a={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)a[n[0][r]]=e[r];return a}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},a={request:function(e){return new Promise(function(n,s){var a=function(){this.off("change",a),n()}.bind(this);this.on("change",a),e=e||t.documentElement,Promise.resolve(e[r.requestFullscreen]()).catch(s)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s),Promise.resolve(t[r.exitFullscreen]()).catch(n)}else e()}.bind(this))},toggle:function(e){return this.isFullscreen?this.exit():this.request(e)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(a,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=a:window.screenfull=a):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}));i.isEnabled;function l(e){e.fullscreen=()=>{i.isEnabled&&i.toggle(document.body)},document.addEventListener("keydown",t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!i.isEnabled||(e.fullscreen(),t.preventDefault())})}function c(e={}){const t=Object.assign({interval:200},e);return e=>{document.addEventListener("keydown",t=>{(32===t.which&&t.shiftKey||33===t.which||37===t.which||38===t.which)&&e.prev(),(32===t.which&&!t.shiftKey||34===t.which||39===t.which||40===t.which)&&e.next(),35===t.which&&e.slide(e.slides.length-1,{fragment:-1}),36===t.which&&e.slide(0)});let n,r,s=0;e.parent.addEventListener("wheel",a=>{let i=!1;const l=(e,t)=>{e&&(i=i||function(e,t){return function(e,t){const n=t===o.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),e&&e.parentElement&&l(e.parentElement,t)};if(0!==a.deltaX&&l(a.target,o.X),0!==a.deltaY&&l(a.target,o.Y),i)return;a.preventDefault(),r&&clearTimeout(r),r=setTimeout(()=>{n=0},t.interval);const c=Date.now()-s<t.interval,u=Math.sqrt(Math.pow(a.deltaX,2)+Math.pow(a.deltaY,2)),d=u<=n;if(n=u,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(e[f](),s=Date.now())})}}function u(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return i.isEnabled||n("fullscreen",e=>e.style.display="none"),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement)switch(t.target.dataset.bespokeMarpOsc){case"next":e.next();break;case"prev":e.prev();break;case"fullscreen":"function"==typeof e.fullscreen&&i.isEnabled&&e.fullscreen()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:s})=>{n("prev",e=>e.disabled=0===t&&0===s),n("next",n=>n.disabled=t===e.slides.length-1&&s===r.length-1)}),i.isEnabled&&i.onchange(()=>n("fullscreen",e=>e.classList.toggle("exit",i.isEnabled&&i.isFullscreen)))}}!function(e){e.X="X",e.Y="Y"}(o||(o={}));const d=".bespoke-progress-bar";function f(e){e.on("activate",t=>{document.querySelectorAll(d).forEach(n=>{n.style.flexBasis=`${100*t.index/(e.slides.length-1)}%`})})}const h=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${s}`},m=e=>new URLSearchParams(location.search).get(e),g=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function p(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,a=Math.max(0,Math.min(t,s.length-1)),o=Math.max(0,Math.min(n||0,r[a].length-1));a===e.slide()&&o===e.fragmentIndex||e.slide(a,{fragment:o})})((g(location.hash.slice(1))||1)-1,t.fragment?g(m("f")||""):null)};e.on("fragment",({index:e,fragmentIndex:r})=>{if(n)return;const s=new URLSearchParams(location.search);0===r?s.delete("f"):s.set("f",r.toString()),((...e)=>t.history?history.pushState(...e):history.replaceState(...e))(null,document.title,h(s,Object.assign(Object.assign({},location),{hash:`#${e+1}`})))}),setTimeout(()=>{s(),window.addEventListener("hashchange",()=>r(()=>{s({fragment:!1});const e=new URLSearchParams(location.search);e.delete("f"),history.replaceState(null,document.title,h(e))})),window.addEventListener("popstate",()=>{n||r(()=>s())}),n=!1},0)}}var b=self.crypto||self.msCrypto,v=function(e){e=e||21;for(var t="",n=b.getRandomValues(new Uint8Array(e));0<e--;)t+="Uint8ArdomValuesObj012345679BCDEFGHIJKLMNPQRSTWXYZ_cfghkpqvwxyz-"[63&n[e]];return t};function w(e={}){const t=e.key||v(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=localStorage.getItem(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return localStorage.setItem(n,JSON.stringify(s)),s};return s(e=>({reference:(e.reference||0)+1})),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0}),setTimeout(()=>{e.on("fragment",e=>{s(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);n.index===r.index&&n.fragmentIndex===r.fragmentIndex||e.slide(r.index,{fragment:r.fragmentIndex})}}),e.on("destroy",()=>{const{reference:e}=r();void 0===e||e<=1?localStorage.removeItem(n):s(()=>({reference:e-1}))})}}function E(e={}){const t=Object.assign({slope:Math.tan(-35*Math.PI/180),swipeThreshold:30},e);return e=>{let n;const r=e.parent,s=e=>{const t=r.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};r.addEventListener("touchstart",e=>{n=1===e.touches.length?s(e.touches[0]):void 0}),r.addEventListener("touchmove",e=>{if(n)if(1===e.touches.length){e.preventDefault();const t=s(e.touches[0]),r=t.x-n.x,a=t.y-n.y;n.delta=Math.sqrt(Math.pow(Math.abs(r),2)+Math.pow(Math.abs(a),2)),n.radian=Math.atan2(r,a)}else n=void 0}),r.addEventListener("touchend",r=>{if(n){if(n.delta&&n.delta>=t.swipeThreshold){let s=n.radian-t.slope;s=(s+Math.PI)%(2*Math.PI)-Math.PI,e[s<0?"next":"prev"](),r.stopPropagation()}n=void 0}})}}!function(o=document.getElementById("p")){const i=e.from(o,[t(),n,r(),s,p({history:!1}),c(),l,f,E(),u(),a,w({key:m("sync")||void 0})]);window.addEventListener("unload",()=>i.destroy())}()}();
+</script></body></html>

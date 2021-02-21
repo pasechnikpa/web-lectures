@@ -6,7 +6,7 @@
   {
     "title": "Лекция 2",
     "html": true,
-    "path": "/html/lecture2.html"
+    "path": "./html/lecture2.html"
   },
   {
     "title": "Лекция 4",

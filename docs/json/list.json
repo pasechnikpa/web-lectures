@@ -1,10 +1,10 @@
 [
   {
-    "title": "Лекция 1",
+    "title": "Тема 1. HTML",
     "path": "lec1.json"
   },
   {
-    "title": "Лекция 2",
+    "title": "Тема 2. CSS. Свойства блоков, текста и позиционирование",
     "html": true,
     "path": "./html/lecture2.html"
   },

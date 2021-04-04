@@ -9,15 +9,15 @@
     "path": "./html/lecture2.html"
   },
   {
-    "title": "Лекция 3. CSS. Селекторы",
+    "title": "Лекция 4. CSS. Селекторы",
     "path": "lec4.json"
   },
   {
-    "title": "Лекция 4",
+    "title": "Лекция 5",
     "path": "lec5.json"
   },
   {
-    "title": "Лекция 5",
+    "title": "Лекция 6",
     "path": "lec6.json"
   }
 ]

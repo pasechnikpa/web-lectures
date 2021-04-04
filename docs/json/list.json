@@ -13,11 +13,11 @@
     "path": "lec4.json"
   },
   {
-    "title": "Лекция 5",
-    "path": "lec5.json"
+    "title": "Лекция 5. JS. Основы JS",
+    "path": "data.json"
   },
   {
-    "title": "Лекция 6",
+    "title": "Лекция 6. JS. Библиотеки и фреймворки",
     "path": "lec6.json"
   }
 ]

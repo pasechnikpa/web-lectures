@@ -1,17 +1,16 @@
 [
   {
-    "title": "Тема 1. HTML",
+    "title": "Лекция 1. HTML",
     "path": "lec1.json"
   },
   {
-    "title": "Тема 2. CSS. Свойства блоков, текста и позиционирование",
+    "title": "Лекции 2-3. CSS. Свойства блоков, текста и позиционирование",
     "html": true,
     "path": "./html/lecture2.html"
   },
   {
-    "title": "Лекция 4",
+    "title": "Лекция 3",
     "file": "lec4.json",
-    "hide": true
   },
   {
     "title": "Лекция 5",

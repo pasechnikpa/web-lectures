@@ -10,16 +10,16 @@
   },
   {
     "title": "Лекция 3",
-    "file": "lec4.json"
+    "path": "lec4.json"
   },
   {
     "title": "Лекция 5",
-    "file": "lec5.json",
+    "path": "lec5.json",
     "hide": true
   },
   {
     "title": "Лекция 6",
-    "file": "lec6.json",
+    "path": "lec6.json",
     "hide": true
   }
 ]
